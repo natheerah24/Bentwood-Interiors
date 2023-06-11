@@ -169,17 +169,7 @@ function readData(listings) {
                    class="proj_img"
                    src="${listings.img}"
                    />
-                   <div class="overlay">
-                  <div class="text-product">
-                      <h4>${listings.title}</h4>
-                <p>${listings.location}</p>
-                <div class="icons">
-                  <i class="fa-solid fa-bed">   ${listings.bedrooms}</i>
-                  <i class="fa-solid fa-shower">  ${listings.bathroom}</i>
-                  <i class="fa-solid fa-car">  ${listings.parking}</i>
-                  <i class="fa-solid fa-ruler-combined">  ${listings.size}</i>
-                  </div>
-              </div>
+                 
             </div>
          </div>
         `;

@@ -152,9 +152,10 @@ form button {
   display: flex;
   flex-wrap: nowrap;
 }
-.in-contact p {
+.in-contact a {
   font-size: 15px;
   padding-left: 20px;
+  margin-top: -5px;
 }
 .futer {
   padding: 80px;

@@ -31,7 +31,7 @@ a:hover{
 }
 
 #Landing {
-  background-image: url(assets/car-17.jpg);
+  background:linear-gradient(#415a7767, #415a7767), url(assets/pexels-jeshootscom-834892.jpg);
   height: auto;
   background-position: center;
   background-size: cover;
@@ -39,6 +39,7 @@ a:hover{
   color: #E0E1DD;
   overflow-x: hidden;
   text-align: center;
+ 
 }
 
 .landing-head {

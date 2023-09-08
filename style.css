@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -27,9 +28,8 @@ a {
 }
 
 #Landing {
-   /* background: linear-gradient(#778da95c, #778da95c), url(/assets/landing.jpg); */
-  background-image: url(/assets/car-17.jpg);
-  min-height: 100vh;
+  background-image: url(assets/car-17.jpg);
+  height: auto;
   background-position: center;
   background-size: cover;
   justify-content: center;
@@ -41,18 +41,19 @@ a {
 .landing-head {
   font-family: auto;
 }
+
 img#tv {
   position: absolute;
-  right: -4%;
-  top: 25%;
-  width: 48%;
+  right: 5cqmax;
+  top: 29%;
+  width: 40%;
 }
 img#tv-img {
   position: absolute;
-  width: 34%;
-  top: 32.2%;
-  left: 63%;
-  height: 34%;
+  width: 28%;
+  top: 36.7%;
+  left: 60.9%;
+  height: 33.4%;
 }
 
 footer {
@@ -99,11 +100,28 @@ form button {
 
 .fter .row {
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right:0;
+  margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 
 .fter {
   display: table-cell;
   vertical-align: middle;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .in-contact {
@@ -117,16 +135,11 @@ form button {
   padding-left: 20px;
   margin-top: -5px;
 }
-
-.futer {
-  padding: 80px;
-  padding-top: 70px;
-  padding-bottom: 70px;
+button:hover {
+  color: #778DA9; 
+  background-color: #E0E1DD; 
 }
 
-.futer h5 {
-  padding-bottom: 30px;
-}
 
 .big {
   font-size: 30px;
@@ -135,8 +148,9 @@ form button {
 .socials {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 15%;
-  padding-top: 20px;
+  padding-top: 8px;
   margin-right: 25%;
   font-size: 130%;
 }
@@ -251,14 +265,14 @@ font-style: italic;
 } 
 
 input[type=checkbox]:checked + label {
-color: #f00;
+color: #415A77;
 font-style: normal;
 }
 
 .container2 {
   width: 100%;
-  margin-top: 36%;
-margin-left: -3%;
+  margin-top: 31%;
+  margin-left: 6%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,7 +359,7 @@ margin-left: -3%;
   color: #ffffff;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 1.5px;
 }
 
 @keyframes mainBlock {
@@ -406,7 +420,6 @@ margin-left: -3%;
     width: 7px;
     height: 7px;
     bottom: 0px;
-    /* width: 15px; <-- remove this line */
   }
   80% {
     width: 10px;
@@ -487,13 +500,19 @@ margin-left: -3%;
     opacity: 1;
   }
 }
-
+@media only screen and (max-width: 1441px) {
+img#tv {
+  right: 2.5cqmax;
+  top: 6.7%;
+}
+img#tv-img {
+  top: 8.4%;
+  left: 60.7%;
+  height: 7.3%;
+}
+}
 
 @media only screen and (max-width: 1000px) {
-  
-  .futer h5 {
-    margin: 14%;
-  }
 
   button {
     margin-top: 10%;
@@ -509,27 +528,130 @@ margin-left: -3%;
   }
 }
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+/* Styling gallery section where all images are */
+#gallery{
+  padding-bottom: 4%;
+}
+.gallery {
+  width: 90%;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-content:center;
+  align-items: center;
+}
+
+/* Styling Particular Image */
+.gallery-img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+/* onHover image will expand little bit */
+.gallery-img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+/* This section will be seen when we click on image */
+.image-popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* close button when we want to close the bigger image */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size:60px;
+  color: #fff;
+  cursor: pointer;
+}
+.close-button:hover{
+  color: #778DA9;
+}
+
+/* when we click on the image it will expand in bigger size and will displayed
+at middle of screen */
+#popupImage {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Making images more responsive for smaller size device */
+@media (max-width:670px) {
+  .gallery{
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .gallery-img{
+      width:150px;
+      height: 150px;
+  }
+
+  .heading{
+      font-size: 20px;
+  }
+  #Landing {
+    background-size: cover;
+    background-position: center;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    color: #E0E1DD;
+    overflow-x: hidden;
+}
+.container2 .box {
+  width: 250px;
+  height: 250px;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container2 .box .title .block, .container2 .box .role .block { 
+  background: none;
+}
+.container2 .box .title h1 {
+  font-size: 12px;
+  margin-top: 24%;
+  margin-left: 10%;
+}
+.container2 .box .role p {
+  font-size: 6px;
+  margin-top: 47%;
+  margin-left: 27%;
+}
+img#tv {
+  top: 14%;
+  right: -5%;
+  width: 52%;
+}
+img#tv-img {
+  top: 16.2%;
+    height: 8.9%;
+    width: 36%;
+}
+.socials {
+  margin-right: 10%;
+}
+.socials {
+  display: flex;
+  align-items: center;
+}
+p {
+  margin-top: 7%;
+}
 }
 
-/* medium and up screens */
-@media (min-width: 768px) {
-
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(25%);
-  }
-
-  .carousel-inner .carousel-item-start.active, 
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
-  }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-  transform: translateX(0);
-}

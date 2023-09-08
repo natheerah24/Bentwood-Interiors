@@ -26,6 +26,9 @@ a {
   text-decoration: none;
   color: #E0E1DD;
 }
+a:hover{
+  color: #415A77;
+}
 
 #Landing {
   background-image: url(assets/car-17.jpg);
@@ -191,7 +194,7 @@ button:hover {
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
   font-size: 0.75em;
-  color: #E0E1DD;
+  color: #415A77;
   top: -5px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
@@ -205,11 +208,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
   border-radius: 4px;
 }
 
-@media only screen and (max-width: 768px){
-  .styled-input {
-      width:100%;
-  }
-}
+
 
 .styled-input label {
   color: #E0E1DD;
@@ -500,33 +499,6 @@ font-style: normal;
     opacity: 1;
   }
 }
-@media only screen and (max-width: 1441px) {
-img#tv {
-  right: 2.5cqmax;
-  top: 6.7%;
-}
-img#tv-img {
-  top: 8.4%;
-  left: 60.7%;
-  height: 7.3%;
-}
-}
-
-@media only screen and (max-width: 1000px) {
-
-  button {
-    margin-top: 10%;
-  }
-}
-
-@media (max-width: 767px) {
-  .carousel-inner .carousel-item > div {
-    display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-    display: block;
-  }
-}
 
 /* Styling gallery section where all images are */
 #gallery{
@@ -593,55 +565,59 @@ at middle of screen */
 
 /* Making images more responsive for smaller size device */
 @media (max-width:670px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .gallery{
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .gallery-img{
       width:150px;
       height: 150px;
-  }
-
-  .heading{
+    }
+    
+    .heading{
       font-size: 20px;
-  }
-  #Landing {
-    background-size: cover;
-    background-position: center;
-    min-height: 0;
-    display: flex;
-    justify-content: center;
-    color: #E0E1DD;
-    overflow-x: hidden;
-}
-.container2 .box {
-  width: 250px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.container2 .box .title .block, .container2 .box .role .block { 
-  background: none;
-}
-.container2 .box .title h1 {
-  font-size: 12px;
-  margin-top: 24%;
-  margin-left: 10%;
-}
-.container2 .box .role p {
-  font-size: 6px;
-  margin-top: 47%;
-  margin-left: 27%;
-}
-img#tv {
+    }
+    #Landing {
+      background-size: cover;
+      background-position: center;
+      min-height: 0;
+      display: flex;
+      justify-content: center;
+      color: #E0E1DD;
+      overflow-x: hidden;
+    }
+    .container2 .box {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .container2 .box .title .block, .container2 .box .role .block { 
+      background: none;
+    }
+    .container2 .box .title h1 {
+      font-size: 12px;
+      margin-top: 24%;
+      margin-left: 10%;
+    }
+    .container2 .box .role p {
+      font-size: 6px;
+      margin-top: 47%;
+      margin-left: 27%;
+    }
+    img#tv {
   top: 14%;
   right: -5%;
   width: 52%;
 }
 img#tv-img {
   top: 16.2%;
-    height: 8.9%;
-    width: 36%;
+  height: 8.9%;
+  width: 36%;
 }
 .socials {
   margin-right: 10%;
@@ -654,4 +630,37 @@ p {
   margin-top: 7%;
 }
 }
+  html,
+body {
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 768px){
+  .styled-input {
+      width:100%;
+  html,
+  body {
+  overflow-x: hidden;
+}
+  }
+}
+@media only screen and (max-width: 1000px) {
+
+  button {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 1441px) {
+img#tv {
+  right: 2.5cqmax;
+  top: 6.7%;
+}
+img#tv-img {
+  top: 8.4%;
+  left: 60.7%;
+  height: 7.3%;
+}
+}
+
+
 

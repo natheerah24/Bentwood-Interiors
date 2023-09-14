@@ -657,15 +657,15 @@ body {
   .container2 .box .title h1 {
     font-family: 'Poppins';
     color: #fff;
-    font-size: 58px;
+    font-size: 30px;
     /* animation: mainFadeIn 2s forwards;
     animation-delay: 1.6s;
     opacity: 0; */
     display: flex;
     align-items: baseline;
     position: relative;
-    margin-bottom: 20%;
-    margin-left: 30%;
+    margin-bottom: -17%;
+    margin-right: 61%;
 }
 .container2 .box .role {
   display: none;

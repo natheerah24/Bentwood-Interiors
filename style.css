@@ -657,7 +657,7 @@ body {
   .container2 .box .title h1 {
     font-family: 'Poppins';
     color: #fff;
-    font-size: 68px;
+    font-size: 58px;
     /* animation: mainFadeIn 2s forwards;
     animation-delay: 1.6s;
     opacity: 0; */
@@ -665,6 +665,7 @@ body {
     align-items: baseline;
     position: relative;
     margin-bottom: 20%;
+    margin-left: 30%;
 }
 .container2 .box .role {
   display: none;

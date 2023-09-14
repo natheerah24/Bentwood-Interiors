@@ -31,7 +31,7 @@ a:hover{
 }
 
 #Landing {
-  background:linear-gradient(#415a7767, #415a7767), url(assets/pexels-jeshootscom-834892.jpg);
+  background:linear-gradient(#415a7767, #415a7767), url(https://i.postimg.cc/dtcDSs8q/pexels-jeshootscom-834892.jpg);
   height: auto;
   background-position: center;
   background-size: cover;
@@ -195,7 +195,7 @@ button:hover {
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
   font-size: 0.75em;
-  color: #415A77;
+  color: #E0E1DD;
   top: -5px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
@@ -272,10 +272,10 @@ font-style: normal;
 .container2 {
   width: 100%;
   margin-top: 31%;
-  margin-left: 6%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-left: -8%;
 }
 
 .container2 .box {
@@ -293,6 +293,7 @@ font-style: normal;
   display: flex;
   align-items: center;
   height: 50px;
+  margin-top: -159%;
 }
 
 .container2 .box .title .block {
@@ -307,7 +308,7 @@ font-style: normal;
 .container2 .box .title h1 {
   font-family: 'Poppins';
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   animation: mainFadeIn 2s forwards;
   animation-delay: 1.6s;
   opacity: 0;
@@ -315,6 +316,7 @@ font-style: normal;
   align-items: baseline;
   position: relative;
   margin-bottom: 3%;
+ 
 }
 
 .container2 .box .title h1 span {
@@ -601,7 +603,7 @@ at middle of screen */
       background: none;
     }
     .container2 .box .title h1 {
-      font-size: 12px;
+      font-size: 57px;
       margin-top: 24%;
       margin-left: 10%;
     }
@@ -652,14 +654,28 @@ body {
   }
 }
 @media only screen and (max-width: 1441px) {
-img#tv {
-  right: 2.5cqmax;
-  top: 6.7%;
+  .container2 .box .title h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-size: 68px;
+    /* animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0; */
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    margin-bottom: 20%;
 }
-img#tv-img {
-  top: 8.4%;
-  left: 60.7%;
-  height: 7.3%;
+.container2 .box .role {
+  display: none;
+}
+.container2 .box .title .block {
+  width: 0%;
+  height: fit-content;
+  background: #778DA9;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  display: flex;
 }
 }
 
